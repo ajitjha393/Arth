@@ -1,4 +1,4 @@
-# arth-app
+# Arth- A Stock Trading Application
 
 ## Project setup
 ```
