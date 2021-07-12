@@ -49,7 +49,7 @@ export default {
   },
   methods: {
     ...mapActions({
-      sellStock: sellStockAction
+      sellStockAction: 'sellStock'
     }),
     sellStock() {
       const order = {
