@@ -29,7 +29,7 @@ const mutations = {
     const record = newStocks[recordIndex];
 
     if (record.quantity > stockQuantity) {
-      record.quantity -= quantity;
+      record.quantity -= stockQuantity;
     } else {
       newStocks.splice(recordIndex, 1);
     }

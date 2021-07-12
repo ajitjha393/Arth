@@ -1,4 +1,5 @@
 import { RND_STOCKS, SET_STOCKS } from '../mutation-types/stocks';
+import { BUY_STOCK } from '../mutation-types/portfolio';
 import stocks from '../../data/stocks';
 
 const state = {
@@ -18,7 +19,7 @@ const mutations = {
 };
 
 const actions = {
-  buyStocks: ({ commit }, order) => commit(),
+  buyStocks: ({ commit }, order) => commit(BUY_STOCK, order),
   initStocks: ({ commit }) => commit(SET_STOCKS, stocks),
   randomizeStocks: ({ commit }) => commit(RND_STOCKS)
 };
