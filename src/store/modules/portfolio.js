@@ -1,4 +1,4 @@
-import { BUY_STOCK, SELL_STOCK } from '../mutation-types/portfolio';
+import { BUY_STOCK, SELL_STOCK,SET_PORTFOLIO } from '../mutation-types/portfolio';
 
 const state = {
   funds: 10000,
@@ -36,6 +36,11 @@ const mutations = {
 
     state.funds += stockPrice * stockQuantity;
     state.stocks = newStocks;
+  },
+
+  [SET_PORTFOLIO]: (state, portfolio) => {
+    state.funds = portfolio.funds
+    state.stocks = portfolio.stockPortfolio ? portfolio.stockPortfolio : []
   }
 };
 const actions = {
