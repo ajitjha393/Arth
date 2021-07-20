@@ -7,11 +7,14 @@ import store from './store';
 
 Vue.config.productionTip = false;
 
+
 Vue.use(VueRouter);
 const router = new VueRouter({
   mode: 'history',
   routes
 });
+
+Vue.filter('currency', value => '$' + value.toLocaleString())
 
 new Vue({
   render: h => h(App),
